@@ -15,8 +15,8 @@ require_once __DIR__ . '/helper.php';
 $headerText	= JString::trim($params->get('header_text'));
 $footerText	= JString::trim($params->get('footer_text'));
 
-$list = ModLanguagesHelper::getList($params);
+$list = ModZtLanguageSwitcherHelper::getList($params);
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
-require JModuleHelper::getLayoutPath('mod_languages', $params->get('layout', 'default'));
+require JModuleHelper::getLayoutPath('mod_zt_languageswitcher', $params->get('layout', 'default'));

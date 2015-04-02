@@ -19,7 +19,7 @@ JLoader::register('MenusHelper', JPATH_ADMINISTRATOR . '/components/com_menus/he
  *
  * @since       1.6.0
  */
-abstract class ModLanguagesHelper
+abstract class ModZtLanguageSwitcherHelper
 {
 	/**
 	 * Gets a list of available languages
