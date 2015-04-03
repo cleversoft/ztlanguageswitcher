@@ -67,7 +67,6 @@
 }
 .sbOptions li:last-child a{border-bottom: none;}
 .sbOptions a{
-    border-bottom: dotted 1px #515151;
     display: block;
     outline: none;
     padding: 0 0 0 27px;
