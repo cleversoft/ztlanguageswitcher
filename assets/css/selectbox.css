@@ -57,7 +57,7 @@
     top: 30px;
     width: 160px;
     z-index: 1;
-    overflow-y: auto;
+    background: #fff;
     box-shadow: 0 0 5px 0px #ccc;
 }
 .sbOptions li{
@@ -65,6 +65,7 @@
     line-height: 40px;
     padding: 0 7px;
 }
+.sbOptions li:last-child a{border-bottom: none;}
 .sbOptions a{
     border-bottom: dotted 1px #515151;
     display: block;

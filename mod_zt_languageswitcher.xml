@@ -11,9 +11,10 @@
     <description>MOD_ZT_LANGUAGESWITCHER_XML_DESCRIPTION</description>
     <files>
         <filename module="mod_zt_languageswitcher">mod_zt_languageswitcher.php</filename>
-        <folder>tmpl</folder>
         <filename>helper.php</filename>
         <filename>mod_zt_languageswitcher.xml</filename>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
     </files>
     <languages folder="language">
         <language tag="en-GB">en-GB/en-GB.mod_zt_languageswitcher.ini</language>
