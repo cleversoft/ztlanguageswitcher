@@ -9,6 +9,9 @@
 defined('_JEXEC') or die;
 
 ?>
+<link href="<?php echo JURI::base(); ?>/modules/mod_zt_languageswitcher/assets/css/selectbox.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="<?php echo JURI::base(); ?>/modules/mod_zt_languageswitcher/assets/js/jquery.selectbox.js"></script>
 <div class="mod-languages<?php echo $moduleclass_sfx ?>">
     <?php if ($headerText) : ?>
         <div class="pretext"><p><?php echo $headerText; ?></p></div>
@@ -16,10 +19,10 @@ defined('_JEXEC') or die;
 
     <?php if ($params->get('dropdown', 1)) : ?>
         <form name="lang" method="post" action="<?php echo htmlspecialchars(JUri::current()); ?>">
-            <select class="inputbox" onchange="document.location.replace(this.value);" >
+            <select id="zt_language" class="inputbox" onchange="document.location.replace(this.value);" >
                 <?php foreach ($list as $language) : ?>
-                    <option dir=<?php echo JLanguage::getInstance($language->lang_code)->isRTL() ? '"rtl"' : '"ltr"' ?> value="<?php echo $language->link; ?>" <?php echo $language->active ? 'selected="selected"' : '' ?>>
-                        <?php echo $language->title_native; ?></option>
+                    <option data-code="<?php echo $language->image; ?>" dir=<?php echo JLanguage::getInstance($language->lang_code)->isRTL() ? '"rtl"' : '"ltr"' ?> value="<?php echo $language->link; ?>" <?php echo $language->active ? 'selected="selected"' : '' ?>>
+                        <span></span><?php echo $language->title_native; ?></option>
                 <?php endforeach; ?>
             </select>
         </form>
@@ -43,5 +46,24 @@ defined('_JEXEC') or die;
 
     <?php if ($footerText) : ?>
         <div class="posttext"><p><?php echo $footerText; ?></p></div>
-            <?php endif; ?>
+    <?php endif; ?>
 </div>
+
+<script type="text/javascript">
+    jQuery('#zt_language').selectbox({
+        mobile: true,
+        menuSpeed: 'fast'
+    });
+    jQuery(window).load(function(){
+        jQuery("#zt_language option").each(function(i,e){
+            var lang = jQuery(this).data('code');
+            jQuery('.mod-languages .sbOptions li:eq('+i+') a').css({
+                "background-image":"url('<?php echo JURI::base(); ?>/media/mod_languages/images/"+lang+".gif')",
+                "background-repeat":"no-repeat",
+                "background-position":"0px 14px"
+            });
+        });
+        jQuery('.sbHolder:eq(0)').addClass('lang');
+        jQuery('.sbHolder:eq(1)').addClass('curs');
+    });
+</script>
