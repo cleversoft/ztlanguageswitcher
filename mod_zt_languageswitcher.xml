@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.1" client="site" method="upgrade">
     <name>MOD_ZT_LANGUAGESWITCHER</name>
-    <author>CleverSoft</author>
-    <creationDate>Feb 2015</creationDate>
-    <copyright>Copyright (c) 2008 - 2015 CleverSoft</copyright>
+    <creationDate>Apr 03, 2015</creationDate>
+    <author>ZooTemplate.Com</author>
+    <authorEmail>support@zootemplate.com</authorEmail>
+    <authorUrl>https://www.zootemplate.com</authorUrl>
+    <copyright>Copyright (c) 2008 - 2015 ZooTemplate.com</copyright>
     <license>http://www.gnu.org/licenses/gpl-2.0.html GPLv2 or later</license>
-    <authorEmail>hello@cleversoft.co</authorEmail>
-    <authorUrl>https://github.com/cleversoft</authorUrl>    
-    <version>3.0.0</version>
+    <version>1.0.0</version>
     <description>MOD_ZT_LANGUAGESWITCHER_XML_DESCRIPTION</description>
     <files>
         <filename module="mod_zt_languageswitcher">mod_zt_languageswitcher.php</filename>
@@ -15,9 +15,9 @@
         <filename>helper.php</filename>
         <filename>mod_zt_languageswitcher.xml</filename>
     </files>
-    <languages>
-        <language tag="en-GB">en-GB.mod_zt_languageswitcher.ini</language>
-        <language tag="en-GB">en-GB.mod_zt_languageswitcher.sys.ini</language>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_zt_languageswitcher.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_zt_languageswitcher.sys.ini</language>
     </languages>
     <help key="JHELP_EXTENSIONS_MODULE_MANAGER_LANGUAGE_SWITCHER" />
     <config>
