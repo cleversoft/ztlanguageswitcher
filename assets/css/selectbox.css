@@ -20,9 +20,9 @@
     outline: none;
     overflow: hidden;
     position: absolute;
-    text-indent: 10px;
     top: 0;
     width: 170px;
+    padding-left: 37px;
 }
 .sbSelector:link, .sbSelector:visited, .sbSelector:hover{
     color: #EBB52D;
@@ -61,6 +61,8 @@
     overflow-y: auto;
 }
 .sbOptions li{
+    height: 40px;
+    line-height: 40px;
     padding: 0 7px;
 }
 .sbOptions a{

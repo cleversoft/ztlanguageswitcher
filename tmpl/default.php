@@ -21,8 +21,7 @@ defined('_JEXEC') or die;
         <form name="lang" method="post" action="<?php echo htmlspecialchars(JUri::current()); ?>">
             <select id="zt_language" class="inputbox" onchange="document.location.replace(this.value);" >
                 <?php foreach ($list as $language) : ?>
-                    <option data-code="<?php echo $language->image; ?>" dir=<?php echo JLanguage::getInstance($language->lang_code)->isRTL() ? '"rtl"' : '"ltr"' ?> value="<?php echo $language->link; ?>" <?php echo $language->active ? 'selected="selected"' : '' ?>>
-                        <span></span><?php echo $language->title_native; ?></option>
+                    <option data-code="<?php echo $language->image; ?>" dir=<?php echo JLanguage::getInstance($language->lang_code)->isRTL() ? '"rtl"' : '"ltr"' ?> value="<?php echo $language->link; ?>" <?php echo $language->active ? 'selected="selected"' : '' ?>><?php echo $language->title_native; ?></option>
                 <?php endforeach; ?>
             </select>
         </form>
@@ -56,11 +55,20 @@ defined('_JEXEC') or die;
     });
     jQuery(window).load(function(){
         jQuery("#zt_language option").each(function(i,e){
-            var lang = jQuery(this).data('code');
+            var lang = jQuery(this).data('code'),
+                activeLang = jQuery(".mod-languages .sbSelector");
+            if(jQuery(this).text() == activeLang.text()){
+                activeLang.css({
+                    "background-image":"url('<?php echo JURI::base(); ?>/media/mod_languages/images/"+lang+".gif')",
+                    "background-repeat":"no-repeat",
+                    "background-position":"11px 9px"
+                });
+            } else {
+            }
             jQuery('.mod-languages .sbOptions li:eq('+i+') a').css({
                 "background-image":"url('<?php echo JURI::base(); ?>/media/mod_languages/images/"+lang+".gif')",
                 "background-repeat":"no-repeat",
-                "background-position":"0px 14px"
+                "background-position":"4px 14px"
             });
         });
         jQuery('.sbHolder:eq(0)').addClass('lang');
