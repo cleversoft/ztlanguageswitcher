@@ -1,4 +1,30 @@
 /.gitignore
+
+# IDE & System Related Files
+.buildpath
+.project
+.settings
+.DS_Store
+
+# OSX 
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows 
+Thumbs.db
+Desktop.ini
+
+# IntelliJ - PhpStorm and PyCharm
+.idea
+.idea/
+.idea/*
+*.iml
+*.ipr
+*.iws
+
+# Joomla Directory 
+
 /.htaccess
 /administrator/cache/*
 /administrator/components/com_admin/*
