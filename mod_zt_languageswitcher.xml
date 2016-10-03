@@ -7,7 +7,7 @@
     <authorUrl>https://www.zootemplate.com</authorUrl>
     <copyright>Copyright (c) 2008 - 2016 ZooTemplate.com</copyright>
     <license>http://www.gnu.org/licenses/gpl-2.0.html GPLv2 or later</license>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <description>MOD_ZT_LANGUAGESWITCHER_XML_DESCRIPTION</description>
     <files>
         <filename module="mod_zt_languageswitcher">mod_zt_languageswitcher.php</filename>
