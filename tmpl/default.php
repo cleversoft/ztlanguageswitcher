@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 <link href="<?php echo JURI::base(); ?>/modules/mod_zt_languageswitcher/assets/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
 
 <script type="text/javascript" src="<?php echo JURI::base(); ?>/modules/mod_zt_languageswitcher/assets/js/jquery.selectbox.js"></script>
-<div class="mod-languages<?php echo $moduleclass_sfx ?>">
+<div id="ztlanguage" class="mod-languages<?php echo $moduleclass_sfx ?>">
     <?php if ($headerText) : ?>
         <div class="pretext"><p><?php echo $headerText; ?></p></div>
     <?php endif; ?>
